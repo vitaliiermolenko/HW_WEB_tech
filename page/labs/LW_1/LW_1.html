@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна робота – Реєстрація</title>
+</head>
+<body>
+  <!-- Посилання назад до списку лабораторних -->
+  <p><a href="../labsHP.html">⬅ Повернутися до списку лабораторних</a></p>
+
+  <h1>Форма реєстрації</h1>
+
+  <form action="https://webhook.site/8ba1b669-5f60-4e21-9719-32a25e6d6d6a" method="post">
+    <!-- Ім’я -->
+    <label for="firstName">Ім’я:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    <br><br>
+
+    <!-- Прізвище -->
+    <label for="lastName">Прізвище:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    <br><br>
+
+    <!-- Email -->
+    <label for="email">Електронна пошта:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+
+    <!-- Пароль -->
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+
+    <!-- Підтвердження паролю -->
+    <label for="confirmPassword">Підтвердження паролю:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    <br><br>
+
+    <!-- Дата народження -->
+    <label for="birthdate">Дата народження:</label>
+    <input type="date" id="birthdate" name="birthdate">
+    <br><br>
+
+    <!-- Стать -->
+    <label for="gender">Стать:</label>
+    <select id="gender" name="gender">
+      <option value="">Оберіть стать</option>
+      <option value="male">Чоловіча</option>
+      <option value="female">Жіноча</option>
+      <option value="other">Інша</option>
+    </select>
+    <br><br>
+
+    <!-- Кнопка відправки -->
+    <input type="submit" value="Зареєструватися">
+  </form>
+</body>
+</html>
