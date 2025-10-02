@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8fb;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #c2c2c2;
+  padding: 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background: #85BDCC;
+  color: #ffffff;
+}
+
+.LK { background: #fffadb; }   /* Лекції */
+.PZ { background: #e2ffe2; }   /* Практики */
+.LB { background: #c4e5ff; }   /* Лабораторні */
+.NOTH { background: #f4f8fb; } /* Порожні клітинки */
+
+.day {
+  font-weight: bold;
+  width: 80px;
+}
+
+.time {
+  color: #003366;
+  font-weight: bold;
+}
