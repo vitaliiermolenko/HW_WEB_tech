@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Відеоплатформа — Макет</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Хедер -->
+    <header class="topbar">
+        <div class="top-left">
+            <button class="menu-btn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="brand">YouTude</div>
+            <a href="../labsHP.html">⬅ Повернутися до списку лабораторних</a>
+        </div>
+
+        <div class="search-bar">
+            <input class="search-input" type="search" placeholder="Пошук" aria-label="Пошук">
+            <button class="search-btn">🔍</button>
+        </div>
+
+        <div class="top-right">
+            <button class="icon-btn">➕</button>
+            <button class="icon-btn">🔔</button>
+            <div class="avatar">U</div>
+        </div>
+    </header>
+
+    <!-- Основний контейнер -->
+    <div class="app">
+        <!-- Бічне меню -->
+        <nav class="sidebar">
+            <div class="nav-group">
+                <div class="nav-item activee"><div class="icon">🏠</div> <span>Головна</span></div>
+                <div class="nav-item">📺 <span>Підписки</span></div>
+                <div class="nav-item">📚 <span>Бібліотека</span></div>
+            </div>
+            <div class="nav-small">Категорії</div>
+            <div class="nav-group">
+                <div class="nav-item">🎵 <span>Музика</span></div>
+                <div class="nav-item">🎮 <span>Ігри</span></div>
+                <div class="nav-item">📰 <span>Новини</span></div>
+            </div>
+        </nav>
+
+        <!-- Контент -->
+        <main class="content">
+            <div class="filters">
+                <div class="chip active">Всі</div>
+                <div class="chip">Сьогодні</div>
+                <div class="chip">Прямі трансляції</div>
+                <div class="chip">Навчання</div>
+            </div>
+
+            <section class="grid">
+                <!-- Картка відео -->
+                <article class="card">
+                    <a class="thumb" href="#">
+                        <span class="duration">12:34</span>
+                    </a>
+                    <div class="meta">
+                        <div class="avatar"></div>
+                        <div class="meta-body">
+                            <h3 class="title">Приклад назви відео — довгий заголовок</h3>
+                            <div class="channel">Канал • <span class="muted">240 тис. переглядів • 2 дні тому</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <a class="thumb" href="#">
+                        <span class="duration">4:05</span>
+                    </a>
+                    <div class="meta">
+                        <div class="avatar"></div>
+                        <div class="meta-body">
+                            <h3 class="title">Огляд: як зробити гарний макет інтерфейсу</h3>
+                            <div class="channel">DesignLab • <span class="muted">56 тис. • 1 тиждень</span></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <a class="thumb" href="#">
+                        <span class="duration">2:20:11</span>
+                    </a>
+                    <div class="meta">
+                        <div class="avatar"></div>
+                        <div class="meta-body">
+                            <h3 class="title">Повна трансляція — обговорення технологій</h3>
+                            <div class="channel">TechTalk • <span class="muted">3.2 млн • 3 місяці</span></div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
