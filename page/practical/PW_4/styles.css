@@ -1,0 +1,126 @@
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+:root {
+    --key-size: 50px;
+    --key-gap: 6px;
+    --key-bg: #ff6b6b;
+    --key-hover: #ff8787;
+    --key-active: #fa5252;
+    --key-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: auto 150px 220px;
+    gap: 20px;
+}
+
+.key {
+    background-color: var(--key-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.1;
+    height: var(--key-size);
+    font-family: "Roboto Mono", monospace;
+
+    box-shadow: var(--key-shadow);
+    transition: all 0.1s ease-in-out;
+}
+
+.key:hover {
+    background-color: var(--key-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.key:active {
+    background-color: var(--key-active);
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ГОЛОВНИЙ БЛОК */
+.main-keyboard {
+    display: grid;
+    grid-template-columns: repeat(15, var(--key-size));
+    grid-auto-rows: var(--key-size);
+    gap: var(--key-gap);
+}
+
+/* СПЕЦІАЛЬНІ КЛАВІШІ */
+.backspace {
+    grid-column: span 2;
+}
+
+.tab {
+    grid-column: span 2;
+}
+
+.caps {
+    grid-column: span 2;
+}
+
+.enter {
+    grid-column: span 2;
+}
+
+.lshift {
+    grid-column: span 2;
+}
+
+.rshift {
+    grid-column: span 3;
+}
+
+.space {
+    grid-column: 4 / span 8;
+}
+
+.ctrl {
+    grid-column: span 1;
+}
+
+/* CONTROL CLUSTER */
+.control-cluster {
+    display: grid;
+    grid-template-columns: repeat(3, var(--key-size));
+    grid-auto-rows: var(--key-size);
+    gap: var(--key-gap);
+}
+
+/* NUMPAD */
+.numpad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, var(--key-size));
+    grid-auto-rows: var(--key-size);
+    gap: var(--key-gap);
+}
+
+.num-plus {
+    grid-row: span 2;
+    height: calc(2 * var(--key-size) + var(--key-gap));
+}
+
+.num-enter {
+    grid-row: span 2;
+    height: calc(2 * var(--key-size) + var(--key-gap));
+}
+
+.num-zero {
+    grid-column: span 2;
+    width: calc(2 * var(--key-size) + var(--key-gap));
+}
