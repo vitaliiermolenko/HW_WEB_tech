@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weekly Plan — Grid Version</title>
+    <style>
+        :root {
+            --gutter: 14px;
+            --sidebar-width: 280px;
+            --accent: #222;
+            --muted: #9a9a9a;
+            --thin: 1px;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            background: #f3f3f3;
+            padding: 20px;
+        }
+
+        .page {
+            width: 1100px;
+            border: 6px solid #dcdcdc;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: var(--sidebar-width) 1fr;
+            gap: 2px;
+        }
+
+        /* HEADER */
+        .header {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: end;
+            border-bottom: var(--thin) solid #dcdcdc;
+            background: white;
+            padding: 5px 5px 5px 20px;
+            gap: 12px;
+        }
+
+        .title {
+            font-size: 28px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .top-fields {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: end;
+            align-items: center;
+            gap: 18px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .top-field {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-field input[type="text"] {
+            border: none;
+            border-bottom: 1px solid #dcdcdc;
+            padding: 4px 6px;
+            background: transparent;
+            width: 160px;
+            outline: none;
+        }
+
+        input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background: white;
+            padding: 10px 10px 0px 20px;
+            clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px,
+                    100% 100%, 0 100%);
+            display: grid;
+            grid-auto-rows: min-content;
+            row-gap: 18px;
+        }
+
+        .block h4 {
+            margin: 0 0 8px 0;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #444;
+        }
+
+        .goal-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            row-gap: 6px;
+        }
+
+        .goal-list li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+        }
+
+        .goal-list li input[type="text"] {
+            border: none;
+            border-bottom: 1px dashed #e0e0e0;
+            height: 20px;
+            outline: none;
+            background: transparent;
+        }
+
+        /* CALENDAR */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 2px;
+            background: transparent;
+        }
+
+        .day {
+            min-height: 180px;
+            position: relative;
+            padding: 24px 14px 14px 14px;
+            box-sizing: border-box;
+            background: white;
+            clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px,
+                    100% 100%, 0 100%, 0 20px);
+            display: grid;
+        }
+
+        .day .label {
+            position: absolute;
+            top: 8px;
+            left: 38%;
+            font-weight: 700;
+            font-size: 12px;
+            color: #222;
+        }
+
+        .day input[type="checkbox"] {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .wednesday {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+
+        .thursday {
+            grid-column: 1 / 2;
+        }
+
+        .friday {
+            grid-column: 2 / 3;
+        }
+
+        .saturday {
+            margin-bottom: 2px;
+        }
+
+        /* FOOTER */
+        .footer-bar {
+            grid-column: 1 / -1;
+            height: 8px;
+            background: #d7d7d7;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page" role="application">
+        <div class="header">
+            <div class="title">WEEKLY PLAN</div>
+            <div class="top-fields">
+                <div class="top-field"><label style="font-size:12px;color:#333">WEEK OF</label><input type="text"
+                        placeholder="Напр. 15.10.2025" /></div>
+                <div class="top-field"><label style="font-size:12px;color:#333">HEALTHY HABIT</label><input type="text"
+                        placeholder="" /></div>
+                <div class="top-field"><label style="font-size:12px;color:#333">ROCKED IT</label><input
+                        type="checkbox" /></div>
+                <div class="top-field"><label style="font-size:12px;color:#333">ROOM FOR IMPROVEMENT</label><input
+                        type="checkbox" /></div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="block">
+                <h4>TOP 3 GOALS</h4>
+                <ul class="goal-list">
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h4>EVERYTHING ELSE</h4>
+                <ul class="goal-list">
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h4>NEXT WEEK</h4>
+                <ul class="goal-list">
+                    <li><input type="checkbox" /><input type="text" /></li>
+                    <li><input type="checkbox" /><input type="text" /></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="calendar" aria-label="weekly calendar">
+            <div class="day monday">
+                <div class="label">MONDAY</div>
+                <input type="checkbox" />
+            </div>
+            <div class="day tuesday">
+                <div class="label">TUESDAY</div>
+                <input type="checkbox" />
+            </div>
+            <div class="day wednesday">
+                <div class="label">WEDNESDAY</div>
+                <input type="checkbox" />
+            </div>
+            <div class="day thursday">
+                <div class="label">THURSDAY</div>
+                <input type="checkbox" />
+            </div>
+            <div class="day friday">
+                <div class="label">FRIDAY</div>
+                <input type="checkbox" />
+            </div>
+            <div>
+                <div class="day saturday">
+                    <div class="label">SATURDAY</div>
+                    <input type="checkbox" />
+                </div>
+                <div class="day sunday">
+                    <div class="label">SUNDAY</div>
+                    <input type="checkbox" />
+                </div>
+            </div>
+        </main>
+
+        <div class="footer-bar" aria-hidden="true"></div>
+    </div>
+</body>
+
+</html>
